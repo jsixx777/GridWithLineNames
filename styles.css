@@ -45,6 +45,7 @@ body {
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+  grid-column: content-start / content-end;
 }
 
 .section-three {

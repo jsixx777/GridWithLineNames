@@ -41,6 +41,7 @@ body {
     color: white;
     display: flex;
     justify-content: space-around;
+    grid-column: content-start / content-end;
 }
 
 .section-three {
