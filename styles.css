@@ -1,0 +1,40 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap");
+body {
+  font-family: 'Oswald', sans-serif;
+  font-weight: 300;
+}
+
+.title {
+  color: white;
+  font-size: 3.5rem;
+}
+
+.title span {
+  font-weight: 300;
+  display: block;
+}
+
+.small-title {
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+
+.section-one {
+  background: url(https://images.unsplash.com/photo-1519681393784-d120267933ba?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8bW91bnRhaW5zfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60);
+  background-color: #777;
+  background-blend-mode: multiply;
+  background-size: cover;
+  text-align: center;
+}
+
+.section-two {
+  background: #000;
+  background-position: bottom;
+  text-align: center;
+  color: white;
+}
+
+.section-three {
+  background: lightblue;
+}
+/*# sourceMappingURL=styles.css.map */
