@@ -1,12 +1,19 @@
 @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap");
 body {
+  display: -ms-grid;
+  display: grid;
   font-family: 'Oswald', sans-serif;
   font-weight: 300;
+  -ms-grid-columns: 1fr 80vw 1fr;
+      grid-template-columns: 1fr 80vw 1fr;
+  -ms-grid-rows: 50vh 5em 5em;
+      grid-template-rows: 50vh 5em 5em;
 }
 
 .title {
   color: white;
   font-size: 3.5rem;
+  background-position: bottom;
 }
 
 .title span {
@@ -32,6 +39,11 @@ body {
   background-position: bottom;
   text-align: center;
   color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 
 .section-three {
