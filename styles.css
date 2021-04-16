@@ -4,8 +4,8 @@ body {
   display: grid;
   font-family: 'Oswald', sans-serif;
   font-weight: 300;
-  -ms-grid-columns: 1fr 80vw 1fr;
-      grid-template-columns: 1fr 80vw 1fr;
+  -ms-grid-columns: [page-start] 1fr [content-start] 80vw [content-end] 1fr [page-end];
+      grid-template-columns: [page-start] 1fr [content-start] 80vw [content-end] 1fr [page-end];
   -ms-grid-rows: 50vh 5em 5em;
       grid-template-rows: 50vh 5em 5em;
 }
@@ -32,6 +32,7 @@ body {
   background-blend-mode: multiply;
   background-size: cover;
   text-align: center;
+  grid-column: page-start/page-end;
 }
 
 .section-two {
