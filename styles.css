@@ -71,6 +71,14 @@ body {
   grid-column: page-start / page-end;
   grid-row: hero-end / content-bottom;
   padding: 150px 0;
-  display: subgrid;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: inherit;
+      grid-template-columns: inherit;
+}
+
+.container {
+  background: lightgreen;
+  grid-column: content-start / content-end;
 }
 /*# sourceMappingURL=styles.css.map */
