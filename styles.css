@@ -6,8 +6,8 @@ body {
   font-weight: 300;
   -ms-grid-columns: [page-start] 1fr [content-start] 80vw [content-end] 1fr [page-end];
       grid-template-columns: [page-start] 1fr [content-start] 80vw [content-end] 1fr [page-end];
-  -ms-grid-rows: 50vh 5em 5em;
-      grid-template-rows: 50vh 5em 5em;
+  -ms-grid-rows: [hero-start] 60vh [info-start] 5em [hero-end] 5em [info-end] auto [content-bottom];
+      grid-template-rows: [hero-start] 60vh [info-start] 5em [hero-end] 5em [info-end] auto [content-bottom];
 }
 
 .title {
@@ -18,6 +18,10 @@ body {
 
 .title span {
   font-weight: 300;
+  display: block;
+}
+
+.section-one span {
   display: block;
 }
 
@@ -32,7 +36,19 @@ body {
   background-blend-mode: multiply;
   background-size: cover;
   text-align: center;
+  background-position: bottom 70%;
   grid-column: page-start/page-end;
+  grid-row: hero-start / hero-end;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .section-two {
@@ -46,9 +62,15 @@ body {
   -ms-flex-pack: distribute;
       justify-content: space-around;
   grid-column: content-start / content-end;
+  grid-row: info-start / info-end;
+  z-index: 10;
 }
 
 .section-three {
   background: lightblue;
+  grid-column: page-start / page-end;
+  grid-row: hero-end / content-bottom;
+  padding: 150px 0;
+  display: subgrid;
 }
 /*# sourceMappingURL=styles.css.map */

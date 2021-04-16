@@ -5,7 +5,7 @@ body {
     font-family: 'Oswald', sans-serif;
     font-weight: 300;
     grid-template-columns: [page-start]1fr [content-start]80vw [content-end]1fr[page-end];
-    grid-template-rows: 50vh 5em 5em;
+    grid-template-rows: [hero-start]60vh [info-start] 5em [hero-end] 5em [info-end] auto [content-bottom];
 }
 
 .title {
@@ -16,6 +16,10 @@ body {
 
 .title span {
     font-weight: 300;
+    display: block;
+}
+
+.section-one span {
     display: block;
 }
 
@@ -30,8 +34,15 @@ body {
     background-blend-mode: multiply;
     background-size: cover;
     text-align: center;
+    background-position: bottom 70%;
 
     grid-column: page-start/page-end;
+    grid-row: hero-start / hero-end;
+    color: white;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .section-two {
@@ -42,8 +53,15 @@ body {
     display: flex;
     justify-content: space-around;
     grid-column: content-start / content-end;
+    grid-row: info-start / info-end;
+    z-index: 10;
 }
 
 .section-three {
     background: lightblue;
+    grid-column: page-start / page-end;
+    grid-row: hero-end / content-bottom;
+    padding: 150px 0;
+
+    display: subgrid; 
 }
