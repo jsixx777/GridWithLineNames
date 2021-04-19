@@ -9,20 +9,29 @@ $pink-mix: rgb(233, 179, 183);
 $green-mix: rgb(18, 172, 44);
 
 body {
+    display: grid;
     background: $black;
+    grid-template-columns: [page-start]1fr [content-start]80vw[content-end] 1fr[page-end];
+    grid-template-rows: [header-start]50vh [banner-begin]2fr[header-end]2fr[banner-end] auto[content-remains];
 }
 
 .section-one {
     color: $white;
     background: $pink-mix;
+    grid-column: page-start / page-end;
+    grid-row: header-start / header-end; 
 }
 
 .section-two {
     color: $white;
     background: $green-mix;
+    grid-column: content-start / content-end;
+    grid-row: banner-begin /banner-end; 
 }
 
 .section-three {
     color: $white;
     background: $blue-mix;
+    grid-column: page-start / page-end;
+    grid-row: header-end / content-remains;
 }

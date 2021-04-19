@@ -1,20 +1,32 @@
 @import url("https://fonts.googleapis.com/css2?family=Orelega+One&display=swap");
 body {
+  display: -ms-grid;
+  display: grid;
   background: black;
+  -ms-grid-columns: [page-start] 1fr [content-start] 80vw [content-end] 1fr [page-end];
+      grid-template-columns: [page-start] 1fr [content-start] 80vw [content-end] 1fr [page-end];
+  -ms-grid-rows: [header-start] 50vh [banner-begin] 2fr [header-end] 2fr [banner-end] auto [content-remains];
+      grid-template-rows: [header-start] 50vh [banner-begin] 2fr [header-end] 2fr [banner-end] auto [content-remains];
 }
 
 .section-one {
   color: white;
   background: #e9b3b7;
+  grid-column: page-start / page-end;
+  grid-row: header-start / header-end;
 }
 
 .section-two {
   color: white;
   background: #12ac2c;
+  grid-column: content-start / content-end;
+  grid-row: banner-begin /banner-end;
 }
 
 .section-three {
   color: white;
   background: #4826c2;
+  grid-column: page-start / page-end;
+  grid-row: header-end / content-remains;
 }
 /*# sourceMappingURL=styles.css.map */
