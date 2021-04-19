@@ -1,3 +1,28 @@
 @import url('https://fonts.googleapis.com/css2?family=Orelega+One&display=swap');
 
 
+$black: black;
+$white: white;
+$yellow: yellow;
+$blue-mix: rgb(72, 38, 194);
+$pink-mix: rgb(233, 179, 183);
+$green-mix: rgb(18, 172, 44);
+
+body {
+    background: $black;
+}
+
+.section-one {
+    color: $white;
+    background: $pink-mix;
+}
+
+.section-two {
+    color: $white;
+    background: $green-mix;
+}
+
+.section-three {
+    color: $white;
+    background: $blue-mix;
+}
