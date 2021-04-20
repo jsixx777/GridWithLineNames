@@ -10,10 +10,27 @@ body {
 }
 
 .section-one {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: url(https://images.unsplash.com/photo-1522120657009-060ca01afcd6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OTJ8fG93bHN8ZW58MHx8MHx8&auto=format&fit=crop&w=800&q=60);
+  background-size: cover;
+  background-position: center 20%;
   color: white;
-  background: #e9b3b7;
   grid-column: page-start / page-end;
   grid-row: header-start / header-end;
+}
+
+.section-one-titles {
+  font-size: x-large;
+  text-align: center;
+  color: yellow;
 }
 
 .section-two {
