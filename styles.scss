@@ -48,8 +48,23 @@ body {
 }
 
 .section-three {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    padding: 150px 0;
     color: $white;
     background: $blue-mix;
     grid-column: page-start / page-end;
     grid-row: header-end / content-remains;
+    grid-template-columns: inherit;
 }
+
+.section-three-titles {
+    display: block;
+    background: $pink-mix;
+    grid-column: content-start / content-end;
+    color: $black;
+    
+
+}
+

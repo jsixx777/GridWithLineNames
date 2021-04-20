@@ -51,9 +51,27 @@ body {
 }
 
 .section-three {
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 150px 0;
   color: white;
   background: #4826c2;
   grid-column: page-start / page-end;
   grid-row: header-end / content-remains;
+  -ms-grid-columns: inherit;
+      grid-template-columns: inherit;
+}
+
+.section-three-titles {
+  display: block;
+  background: #e9b3b7;
+  grid-column: content-start / content-end;
+  color: black;
 }
 /*# sourceMappingURL=styles.css.map */
