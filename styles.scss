@@ -12,7 +12,7 @@ body {
     display: grid;
     background: $black;
     grid-template-columns: [page-start]1fr [content-start]80vw[content-end] 1fr[page-end];
-    grid-template-rows: [header-start]50vh [banner-begin]2fr[header-end]2fr[banner-end] auto[content-remains];
+    grid-template-rows: [header-start]50vh [banner-begin]5em[header-end]5em[banner-end] auto[content-remains];
 }
 
 .section-one {
@@ -36,10 +36,15 @@ body {
 
 
 .section-two {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
     color: $white;
     background: $green-mix;
     grid-column: content-start / content-end;
     grid-row: banner-begin /banner-end; 
+    z-index: 10;
+    padding: 1em;
 }
 
 .section-three {

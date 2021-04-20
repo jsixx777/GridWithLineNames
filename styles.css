@@ -5,8 +5,8 @@ body {
   background: black;
   -ms-grid-columns: [page-start] 1fr [content-start] 80vw [content-end] 1fr [page-end];
       grid-template-columns: [page-start] 1fr [content-start] 80vw [content-end] 1fr [page-end];
-  -ms-grid-rows: [header-start] 50vh [banner-begin] 2fr [header-end] 2fr [banner-end] auto [content-remains];
-      grid-template-rows: [header-start] 50vh [banner-begin] 2fr [header-end] 2fr [banner-end] auto [content-remains];
+  -ms-grid-rows: [header-start] 50vh [banner-begin] 5em [header-end] 5em [banner-end] auto [content-remains];
+      grid-template-rows: [header-start] 50vh [banner-begin] 5em [header-end] 5em [banner-end] auto [content-remains];
 }
 
 .section-one {
@@ -34,10 +34,20 @@ body {
 }
 
 .section-two {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   color: white;
   background: #12ac2c;
   grid-column: content-start / content-end;
   grid-row: banner-begin /banner-end;
+  z-index: 10;
+  padding: 1em;
 }
 
 .section-three {
